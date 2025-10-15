@@ -216,9 +216,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .min-h-dvh {
     min-height: 100dvh;
   }
@@ -227,12 +224,6 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -279,9 +270,6 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-amber-300 {
-    border-color: var(--color-amber-300);
-  }
   .border-blue-600 {
     border-color: var(--color-blue-600);
   }
@@ -290,9 +278,6 @@
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
   }
   .bg-gray-500 {
     background-color: var(--color-gray-500);
@@ -350,15 +335,11 @@
   .text-gray-300 {
     color: var(--color-gray-300);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .opacity-100 {
+    opacity: 100%;
   }
   .transition-opacity {
     transition-property: opacity;
@@ -368,11 +349,6 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
-  }
-  .placeholder\:text-gray-300 {
-    &::placeholder {
-      color: var(--color-gray-300);
-    }
   }
   .placeholder\:text-gray-600 {
     &::placeholder {
@@ -397,14 +373,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-800);
-      }
-    }
-  }
-  .hover\:to-blue-800 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-gradient-to: var(--color-blue-800);
-        --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
       }
     }
   }
@@ -438,56 +406,9 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
-}
-@property --tw-gradient-position {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-via {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-to {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-via-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-@property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
@@ -495,17 +416,7 @@
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
     }
   }
 }

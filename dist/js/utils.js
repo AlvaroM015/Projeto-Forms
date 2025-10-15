@@ -29,5 +29,46 @@
             modal.classList.remove('opacity-0')
             modal.classList.add('opacity-100')
         }, 50)
+           
+      
+       // eveto do botão da modal para o seu fechamento 
+       
+       const fecharBtn = document.querySelector('#fecharModal');
+       fecharBtn.onclick = () => {
+         modal.classList.add("opacity-0")
+         modal.classList.remove("opacity-100")
+         setTimeout(() => {
+               modal.classList.add('hidden')
+               modal.classList.remove('flex') 
+         }, 300);
+       }
+}
 
- }
+// Função para limpar todos os campos do formulário
+
+export function limparCampos(){
+    //pegar o formulário 
+    const form = document.querySelector('enderecoForm');
+    //para limpar vamos percorrer o form com um forEach para cada input
+    form.querySelectorAll('input').forEach(input => input.value = '' );
+}
+
+
+//função para a máscara do CEP
+
+export function aplicarMascaraCep(){
+    //estamos pegando o que foi digitado ou colado no campo de texto
+    //como é uma entrada, essa função será executada para cada número digitado
+    inputElement.addEventListener('input', (e) => {
+
+        // vamos usar o parametro 'e' como target ==> cada um dos números digitados
+        let value = e.target.replace(/\D/g, '');
+
+        if(value.length > 5){
+            value = value.slice(0, 5) + '-' + value.slice(5, 8);
+         }
+
+         //vamos atualizar a visualização do elemento html(input), já no formato de CEP
+         e.target.value = value;
+        });
+}
